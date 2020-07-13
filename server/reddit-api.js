@@ -11,6 +11,7 @@ const users = [];
 const userMap = new Map();
 const app = express();
 const port = 3000;
+const dayInMilliseconds = 1000 * 60 * 60 * 24
 
 
 // Configuring body parser middleware
@@ -154,6 +155,6 @@ let itr =  setInterval(function() {
              }           
          })
         
-},20000)
+},dayInMilliseconds)
 
 app.listen(port, () => console.log(`Reditt api app listening on port ${port}!`));
